@@ -26,7 +26,7 @@ module Merit
 
   # # Define ORM
   def self.orm
-    @config.orm || :active_record
+    @config.orm || :mongoid
   end
 
   # Define user_model_name
@@ -55,7 +55,7 @@ module Merit
 
     def initialize
       @checks_on_each_request = true
-      @orm = :active_record
+      @orm = :mongoid
       @user_model_name = 'User'
       @observers = []
     end
